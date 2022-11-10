@@ -1,4 +1,4 @@
-module github.com/tekintian/myfirstcc
+module github.com/tekintian/myfcc-go
 
 go 1.18
 
