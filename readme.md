@@ -12,6 +12,9 @@ go mod tidy
 
 # 下载依赖项目到本地的vendor目录
 go mod vendor
+
+# 执行单元测试
+go test
 ~~~
 
 ## Package Chaincode
