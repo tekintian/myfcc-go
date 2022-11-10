@@ -1,4 +1,4 @@
-module first-chaincode
+module github.com/tekintian/myfirstcc
 
 go 1.18
 

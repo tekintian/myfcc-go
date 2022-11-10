@@ -21,6 +21,7 @@ func (t *HelloWorldChaincode) Init(stub shim.ChaincodeStubInterface) peer.Respon
 	}
 	return shim.Success(nil)
 }
+
 // 引用方法
 func (t *HelloWorldChaincode) Invoke(stub shim.ChaincodeStubInterface) peer.Response {
 	fn, args:=stub.GetFunctionAndParameters()
@@ -33,6 +34,7 @@ func (t *HelloWorldChaincode) Invoke(stub shim.ChaincodeStubInterface) peer.Resp
 
 	return shim.Success(nil)
 }
+
 func (t *HelloWorldChaincode) set(stub shim.ChaincodeStubInterface, args []string) peer.Response  {
 	err:=stub.PutState(args[0],[]byte(args[1]))
 	if err != nil {
@@ -40,6 +42,7 @@ func (t *HelloWorldChaincode) set(stub shim.ChaincodeStubInterface, args []strin
 	}
 	return shim.Success(nil)
 }
+
 func (t *HelloWorldChaincode) get(stub shim.ChaincodeStubInterface, args []string) peer.Response  {
 	val,err:=stub.GetState(args[0])
 	if err != nil {
